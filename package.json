@@ -1,0 +1,23 @@
+{
+  "name": "unc-homework-09",
+  "version": "1.0.0",
+  "description": "Note Taker app using ES6, Node.js, and Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travis-john/unc-homework-09.git"
+  },
+  "author": "Travis John",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/travis-john/unc-homework-09/issues"
+  },
+  "homepage": "https://github.com/travis-john/unc-homework-09#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.0"
+  }
+}
