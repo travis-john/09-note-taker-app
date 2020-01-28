@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/travis-john/unc-homework-09#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mysql": "^2.18.0"
+    "express": "^4.17.1"
   }
 }
