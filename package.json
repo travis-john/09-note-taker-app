@@ -2,7 +2,7 @@
   "name": "unc-homework-09",
   "version": "1.0.0",
   "description": "Note Taker app using ES6, Node.js, and Express.js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
