@@ -55,10 +55,37 @@ app.post('/api/notes', (req, res) => {
 
     //WRITING NEW DB.JSON FILE AFTER THE NEW NOTE HAS BEEN ADDED TO THE ARRAY
     writeFile('./db/db.json', JSON.stringify(data));
-  })
+  });
 
   //CONFIRMING THAT NEW NOTE HAS BEEN CREATED
   res.send('created new note');
+});
+
+//DELETING NOTES FROM APP
+app.delete('/api/notes/:id', (req, res) =>{
+
+  let id = req.params.id;
+  console.log(id);
+
+  //READING JSON FILE
+  readFile('./db/db.json', 'utf-8').then(function(data){
+
+    //TURNING OBJECT TO STRING
+    data = JSON.parse(data);
+
+    //SPLICE TO REMOVE SPECIFIC NOTE
+    data.splice(id, 1);
+
+    //LOOPING THROUGH ARRAY TO RESET ID
+    for(let i = 0; i < data.length; i++){
+      data[i].id = i;
+    }
+
+    //WRITING FILE WITH UPDATED CHANGES
+    writeFile('./db/db.json', JSON.stringify(data));
+  })
+
+  res.send('deleted')
 })
 
 
